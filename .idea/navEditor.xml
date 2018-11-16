@@ -20,18 +20,6 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="mainActivity2Fragment2">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="258" />
-                            <option name="y" value="32" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                 </map>
               </option>
             </LayoutPositions>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml  Navigation.findNavController(view).navigate(R.id.viewTransactionsAction);version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
