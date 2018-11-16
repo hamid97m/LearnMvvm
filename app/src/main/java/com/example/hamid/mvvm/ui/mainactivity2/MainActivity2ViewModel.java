@@ -3,8 +3,11 @@ package com.example.hamid.mvvm.ui.mainactivity2;
 import android.util.Log;
 import android.view.View;
 
+import com.example.hamid.mvvm.R;
+
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+import androidx.navigation.Navigation;
 
 public class MainActivity2ViewModel extends ViewModel {
     private static final String TAG = "MainActivity2ViewModel";
@@ -43,6 +46,8 @@ public class MainActivity2ViewModel extends ViewModel {
         edittext.postValue(text);
         firstName.postValue(text);
         lastName.postValue(text);
+        Navigation.findNavController(view).navigate(R.id.mainActivity2Fragment);
+
     }
 
 
