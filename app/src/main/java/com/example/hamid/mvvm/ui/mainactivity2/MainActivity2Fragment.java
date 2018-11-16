@@ -41,20 +41,9 @@ public class MainActivity2Fragment extends Fragment {
         mViewModel = ViewModelProviders.of(this).get(MainActivity2ViewModel.class);
         binding.setViewmodel(mViewModel);
 
-        mViewModel.getLastName().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(String s) {
-                Log.i(TAG, "onChanged: "+s);
-                mViewModel.getEdittext().setValue("salam");
-
-            }
-
-        });
-
         return binding.getRoot();
 
     }
-
 
 
 }

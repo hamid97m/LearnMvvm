@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
-        <variable name="viewmodel" type="com.example.hamid.mvvm.ui.mainactivity2.MainActivity2ViewModel"/>
+
+        <variable
+            name="viewmodel"
+            type="com.example.hamid.mvvm.ui.mainactivity2.MainActivity2ViewModel" />
 
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
@@ -47,6 +51,7 @@
             android:layout_marginBottom="8dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:onTextChanged="@{(text, start, before, count) -> viewmodel.onUsernameTextChanged(text)}"
             android:text="@{viewmodel.edittext}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -60,8 +65,8 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:onClick="@{(v) -> viewmodel.onSaveClick(v,editText.getText().toString())}"
             android:text="Button"
-            android:onClick="@{(v) -> viewmodel.onSaveClick(v, viewmodel.edittext)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
