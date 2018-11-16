@@ -2,6 +2,8 @@ package com.example.hamid.mvvm.ui.mainactivity2;
 
 import android.util.Log;
 import android.view.View;
+
+import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -18,6 +20,7 @@ public class MainActivity2ViewModel extends ViewModel {
     public MutableLiveData<String> getLastName() {
         return this.lastName;
     }
+
 
 
     public MutableLiveData<String> getEdittext() {

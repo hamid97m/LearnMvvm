@@ -5,6 +5,10 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.NavController;
+import androidx.navigation.NavHost;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -14,46 +18,44 @@ import android.widget.EditText;
 import android.widget.QuickContactBadge;
 import android.widget.Toast;
 
-import com.example.hamid.mvvm.databinding.ActivityMainBinding;
+import com.example.hamid.mvvm.ui.mainactivity2.MainActivity2Fragment;
 import com.example.hamid.mvvm.ui.mainactivity2.MainActivity2ViewModel;
 
 import java.util.List;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
 
     private MainActivity2ViewModel mViewModel;
-    private static final String TAG = "MainActivitymvvm";
     private EditText editText;
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        mViewModel = ViewModelProviders.of(this).get(MainActivity2ViewModel.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setViewmodel(mViewModel);
-        binding.setLifecycleOwner(this);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.framelayout, MainActivity2Fragment.newInstance())
+                    .commitNow();
+        }
 
 
 
-
-
-
-
-
-
-        mViewModel.getLastName().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(String s) {
-                Log.i(TAG, "onChanged: "+s);
-                mViewModel.getEdittext().setValue("salam");
-
-            }
-
-        });
 
 
     }
+
+
+
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        return Navigation.findNavController(this, R.id.activity_nav).navigateUp();
+    }
+
+
 }
