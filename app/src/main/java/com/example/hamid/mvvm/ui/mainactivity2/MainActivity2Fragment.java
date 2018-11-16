@@ -1,24 +1,17 @@
 package com.example.hamid.mvvm.ui.mainactivity2;
 
-import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.hamid.mvvm.R;
 import com.example.hamid.mvvm.databinding.MainActivity2FragmentBinding;
 
-import java.util.Objects;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 
 public class MainActivity2Fragment extends Fragment {
 
@@ -43,6 +36,7 @@ public class MainActivity2Fragment extends Fragment {
         mViewModel = ViewModelProviders.of(this).get(MainActivity2ViewModel.class);
         Log.i(TAG, "onCreateView: "+mViewModel.getEdittext().getValue()+"   "+mViewModel.getLastName().getValue());
         binding.setViewmodel(mViewModel);
+
 
         return binding.getRoot();
 

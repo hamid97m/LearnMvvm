@@ -3,7 +3,6 @@ package com.example.hamid.mvvm.ui.mainactivity2;
 import android.util.Log;
 import android.view.View;
 
-import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
