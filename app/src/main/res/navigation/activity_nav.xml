@@ -3,17 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_nav"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/mainActivity2Fragment">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.hamid.mvvm.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" >
-        <action
-            android:id="@+id/action_a_to_f"
-            app:destination="@+id/mainActivity2Fragment" />
-    </activity>
     <fragment
         android:id="@+id/mainActivity2Fragment"
         android:name="com.example.hamid.mvvm.ui.mainactivity2.MainActivity2Fragment"

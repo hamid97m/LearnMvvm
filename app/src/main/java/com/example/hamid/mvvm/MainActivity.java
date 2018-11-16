@@ -1,28 +1,12 @@
 package com.example.hamid.mvvm;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.MediatorLiveData;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.navigation.NavController;
-import androidx.navigation.NavHost;
-import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
-
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.QuickContactBadge;
-import android.widget.Toast;
 
-import com.example.hamid.mvvm.ui.mainactivity2.MainActivity2Fragment;
 import com.example.hamid.mvvm.ui.mainactivity2.MainActivity2ViewModel;
 
-import java.util.List;
-import java.util.Objects;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.Navigation;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,13 +19,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.framelayout, MainActivity2Fragment.newInstance())
-                    .commitNow();
-        }
 
 
 
