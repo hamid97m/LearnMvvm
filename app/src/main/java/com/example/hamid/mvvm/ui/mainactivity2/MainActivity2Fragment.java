@@ -29,6 +29,8 @@ public class MainActivity2Fragment extends Fragment {
         return new MainActivity2Fragment();
     }
 
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -39,6 +41,7 @@ public class MainActivity2Fragment extends Fragment {
 
         binding.setLifecycleOwner(this);
         mViewModel = ViewModelProviders.of(this).get(MainActivity2ViewModel.class);
+        Log.i(TAG, "onCreateView: "+mViewModel.getEdittext().getValue()+"   "+mViewModel.getLastName().getValue());
         binding.setViewmodel(mViewModel);
 
         return binding.getRoot();

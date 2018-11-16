@@ -20,6 +20,8 @@ public class MainActivity2ViewModel extends ViewModel {
         }
         return this.firstName;
     }
+
+
     public MutableLiveData<String> getLastName() {
         if (lastName==null){
             lastName=new MutableLiveData<>();
@@ -39,6 +41,7 @@ public class MainActivity2ViewModel extends ViewModel {
 
     public void onSaveClick(View view, String text) {
         Log.i(TAG, "onSaveClick: "+text);
+        edittext.postValue(text);
         firstName.postValue(text);
         lastName.postValue(text);
     }
