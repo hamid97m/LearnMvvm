@@ -9,8 +9,8 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.navigation.Navigation;
 
-public class MainActivity2ViewModel extends ViewModel {
-    private static final String TAG = "MainActivity2ViewModel";
+public class HomeFragmentViewModel extends ViewModel {
+    private static final String TAG = "HomeFragmentViewModel";
 
     private  MutableLiveData<String> firstName;
     private  MutableLiveData<String> lastName;
@@ -50,9 +50,5 @@ public class MainActivity2ViewModel extends ViewModel {
 
     }
 
-
-    public void onUsernameTextChanged(CharSequence s) {
-        Log.d("tag", "onTextChanged " + s);
-    }
 
 }

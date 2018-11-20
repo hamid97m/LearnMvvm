@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainActivity2Fragment"
-        android:name="com.example.hamid.mvvm.ui.mainactivity2.MainActivity2Fragment"
+        android:name="com.example.hamid.mvvm.ui.mainactivity2.HomeFragment"
         android:label="main_activity2_fragment"
         tools:layout="@layout/main_activity2_fragment" />
 </navigation>

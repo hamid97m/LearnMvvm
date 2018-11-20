@@ -1,7 +1,6 @@
 package com.example.hamid.mvvm.ui.mainactivity2;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,15 +12,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
-public class MainActivity2Fragment extends Fragment {
+public class HomeFragment extends Fragment {
 
-    private MainActivity2ViewModel mViewModel;
-    private static final String TAG = "MainActivity2Fragment";
+    private HomeFragmentViewModel mViewModel;
+    private static final String TAG = "HomeFragment";
 
-    public static MainActivity2Fragment newInstance() {
-        return new MainActivity2Fragment();
+    public static HomeFragment newInstance() {
+        return new HomeFragment();
     }
-
 
 
     @Nullable
@@ -33,8 +31,7 @@ public class MainActivity2Fragment extends Fragment {
         MainActivity2FragmentBinding binding = MainActivity2FragmentBinding.inflate(inflater, container, false);
 
         binding.setLifecycleOwner(this);
-        mViewModel = ViewModelProviders.of(this).get(MainActivity2ViewModel.class);
-        Log.i(TAG, "onCreateView: "+mViewModel.getEdittext().getValue()+"   "+mViewModel.getLastName().getValue());
+        mViewModel = ViewModelProviders.of(this).get(HomeFragmentViewModel.class);
         binding.setViewmodel(mViewModel);
 
 
