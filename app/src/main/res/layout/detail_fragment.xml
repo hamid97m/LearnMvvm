@@ -6,7 +6,7 @@
 
         <variable
             name="viewmodel"
-            type="com.example.hamid.mvvm.ui.mainactivity2.HomeFragmentViewModel" />
+            type="com.example.hamid.mvvm.ui.mainactivity2.detail.DetailViewModel" />
 
     </data>
 

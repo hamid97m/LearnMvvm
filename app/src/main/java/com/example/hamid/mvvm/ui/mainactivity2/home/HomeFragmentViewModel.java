@@ -1,5 +1,6 @@
-package com.example.hamid.mvvm.ui.mainactivity2;
+package com.example.hamid.mvvm.ui.mainactivity2.home;
 
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
@@ -43,10 +44,14 @@ public class HomeFragmentViewModel extends ViewModel {
 
     public void onSaveClick(View view, String text) {
         Log.i(TAG, "onSaveClick: "+text);
-        edittext.postValue(text);
-        firstName.postValue(text);
-        lastName.postValue(text);
-        Navigation.findNavController(view).navigate(R.id.mainActivity2Fragment);
+        edittext.setValue(text);
+        firstName.setValue(text);
+        lastName.setValue(text);
+        Log.i(TAG, "onSaveClick: " + edittext.getValue());
+        Bundle bundle = new Bundle();
+        bundle.putString("name", edittext.getValue());
+        Navigation.findNavController(view).navigate(R.id.action_mainActivity2Fragment_to_detailFragment, bundle);
+
 
     }
 

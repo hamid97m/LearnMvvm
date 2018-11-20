@@ -7,7 +7,24 @@
 
     <fragment
         android:id="@+id/mainActivity2Fragment"
-        android:name="com.example.hamid.mvvm.ui.mainactivity2.HomeFragment"
+        android:name="com.example.hamid.mvvm.ui.mainactivity2.home.HomeFragment"
         android:label="main_activity2_fragment"
-        tools:layout="@layout/main_activity2_fragment" />
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_mainActivity2Fragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.hamid.mvvm.ui.mainactivity2.detail.DetailFragment"
+        android:label="detail_fragment"
+        tools:layout="@layout/detail_fragment">
+        <argument
+            android:name="name"
+            android:defaultValue="khar"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_self"
+            app:destination="@id/detailFragment" />
+    </fragment>
 </navigation>

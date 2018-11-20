@@ -1,11 +1,11 @@
-package com.example.hamid.mvvm.ui.mainactivity2;
+package com.example.hamid.mvvm.ui.mainactivity2.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.hamid.mvvm.databinding.MainActivity2FragmentBinding;
+import com.example.hamid.mvvm.databinding.HomeFragmentBinding;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,7 +28,7 @@ public class HomeFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
 
-        MainActivity2FragmentBinding binding = MainActivity2FragmentBinding.inflate(inflater, container, false);
+        HomeFragmentBinding binding = HomeFragmentBinding.inflate(inflater, container, false);
 
         binding.setLifecycleOwner(this);
         mViewModel = ViewModelProviders.of(this).get(HomeFragmentViewModel.class);
